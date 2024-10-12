@@ -1,0 +1,28 @@
+{
+  "name": "runtime-external-remotes-plugin",
+  "version": "1.0.0",
+  "main": "dist/index.es.js",
+  "repository": "https://github.com/86XIng/module-federation-runtime-plugins/blob/main/packages/runtime-external-remotes-plugin",
+  "author": "86XIng",
+  "license": "MIT",
+  "keywords": [
+    "module-federation",
+    "webpack",
+    "rsbuild",
+    "rspack",
+    "external-remotes-plugin",
+    "module-federation/enhanced"
+  ],
+  "types": "dist/types/index.d.ts",
+  "description": "A runtime external-remotes-plugin work with @module-federation/enhanced",
+  "type": "module",
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.json",
+    "pub": "npm run build && npm publish --registry https://registry.npmjs.org"
+  },
+  "devDependencies": {
+    "@module-federation/enhanced": "^0.6.10",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.8"
+  }
+}
