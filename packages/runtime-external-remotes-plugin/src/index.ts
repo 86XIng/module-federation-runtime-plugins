@@ -77,7 +77,7 @@ function toExpression(templateUrl: string) {
             }
             isExpression = false;
             if (current.length) {
-                const key = current.join('');
+                const key = current.join('').replace('window.','');
                 if (typeof window !== 'undefined' && key in window) {
                     const value = eval(`${key}`);
                     result.push(value);

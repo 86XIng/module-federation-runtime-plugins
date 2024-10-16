@@ -1,6 +1,6 @@
 {
   "name": "runtime-external-remotes-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.es.js",
   "repository": "https://github.com/86XIng/module-federation-runtime-plugins/blob/main/packages/runtime-external-remotes-plugin",
   "author": "86XIng",
