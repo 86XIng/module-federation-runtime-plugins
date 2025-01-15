@@ -77,14 +77,13 @@ function toExpression(templateUrl: string) {
             }
             isExpression = false;
             if (current.length) {
-                const key = current.join('').replace('window.','');
-                if (typeof window !== 'undefined' && key in window) {
+                const key = current.join('');
+                try{
                     const value = eval(`${key}`);
                     result.push(value);
-                } else {
-                    throw new Error(
-                        `"${templateUrl}" does not exist on the global`,
-                    );
+                }catch(e){
+                    console.error(e);
+                    throw new Error(`"${templateUrl}" does not exist on the global`);
                 }
             }
             current.length = 0;
